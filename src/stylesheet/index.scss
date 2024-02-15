@@ -1,0 +1,22 @@
+// Import config files
+@import "config/fonts";
+@import "config/colors";
+
+a {
+  color: $dark;
+  text-decoration: inherit;
+
+  &:hover {
+    text-shadow: 0px 0px 1px black;
+  }
+}
+
+body {
+  font-family: $text-font;
+  color: $dark;
+  background: $white;
+  margin: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
