@@ -1,19 +1,18 @@
 @import "stylesheet/config/colors";
 
-.form__group {
+.input__group {
   display: flex;
   flex-direction: column;
-  margin: 1rem 0;
 
   .form__label {
     font-weight: bold;
+    margin: 1rem 0;
   }
 
   .form__input {
     border: 1px solid $dark;
     height: 2rem;
-    width: 10rem;
+    width: 20rem;
     border-radius: 0.5rem;
-    margin: 1rem 0;
   }
 }

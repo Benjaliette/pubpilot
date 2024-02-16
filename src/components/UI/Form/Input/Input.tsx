@@ -1,18 +1,25 @@
+import { ChangeEvent } from "react";
 import classes from "./Input.module.scss";
 
 interface MyInputProps {
   type: string;
-  name: string;
+  id: string;
   label: string;
+  onChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Input = ({ type, name, label }: MyInputProps) => {
+const Input = ({ type, id, label, onChange }: MyInputProps) => {
   return (
-    <div className={classes.form__group}>
-      <label htmlFor={name} className={classes.form__label}>
-        { label }
+    <div className={classes.input__group}>
+      <label htmlFor={id} className={classes.form__label}>
+        {label}
       </label>
-      <input type={type} id={name} name={name} className={classes.form__input}/>
+      <input
+        type={type}
+        id={id}
+        className={classes.form__input}
+        onChange={(e) => onChange(e)}
+      />
     </div>
   );
 };
